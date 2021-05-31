@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonContentPipeline", "JsonContentPipeline.csproj", "{50B5E7A5-AE44-41F8-A012-3795F2BB4E21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B5E7A5-AE44-41F8-A012-3795F2BB4E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B5E7A5-AE44-41F8-A012-3795F2BB4E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B5E7A5-AE44-41F8-A012-3795F2BB4E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B5E7A5-AE44-41F8-A012-3795F2BB4E21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C866565-33D5-49A9-8C06-16FBD84A038C}
+	EndGlobalSection
+EndGlobal
