@@ -82,20 +82,19 @@ namespace Test
 
 # JSON Content Processors
 
-There are 2 JSON Content processor provided.
+There are 2 JSON Content processors provided.
 * <b>JsonToBsonProcessor</b>
 * <b>JsonToXnaReflectiveObjectProcessor</b>
 
 ## JsonToXnaReflectiveObjectProcessor
 
- This processor will deserialize your JSON file to an actual object, Which will be handled by <b>Microsoft.Xna.Content.ReflectiveWriter</b> and <b>Microsoft.Xna.Content.ReflectiveReader</b>. When load an object via <i>ContentManager</i>, <b>Microsoft.Xna.Content.ReflectiveReader</b> will deserialize from their format and return custom game object.
+The processor will deserialize your JSON file to an actual object, Which will be handled by <b>Microsoft.Xna.Content.ReflectiveWriter</b> and <b>Microsoft.Xna.Content.ReflectiveReader</b>. When loading an objects via <i>ContentManager</i>, <b>Microsoft.Xna.Content.ReflectiveReader</b> will deserialize from their format and return custom game object.
  
- Which is besically the same content reader when import custom game object with <b>XML File format</b>
+ Which is the same content reader when import custom game object with <b>XML File format</b>
 
 ## JsonToBsonProcessor
 
-This processor will convert your JSON file to <b>BSON</b> (JSON but in Binary format) format and store all processor parameters. When load content via <i>ContentManager</i>, will create a <b>JsonSerializer</b>
-with specifc <b>JsonSerializerSettings</b> which defined in processor parameters. BSON format will be deserialized into an object by using [Newtonsoft JSON](https://github.com/JamesNK/Newtonsoft.Json).
+The processor will convert your JSON file to <b>BSON</b> (JSON in Binary format) format and store all processor parameters. When content is loaded at runtime via <i>ContentManager</i>,<b>JsonSerializer</b> will be created
+with specific <b>JsonSerializerSettings</b> that are defined in processor parameters. Later BSON format will be deserialized into an object by using [Newtonsoft JSON](https://github.com/JamesNK/Newtonsoft.Json).
 
-Which means that you don't have to reference your game library .dll file in content pipeline.
-
+This means that you don't have to reference your game library .dll file in the content pipeline.
