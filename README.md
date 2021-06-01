@@ -98,3 +98,70 @@ The processor will convert your JSON file to <b>BSON</b> (JSON in Binary format)
 with specific <b>JsonSerializerSettings</b> that are defined in processor parameters. Later BSON format will be deserialized into an object by using [Newtonsoft JSON](https://github.com/JamesNK/Newtonsoft.Json).
 
 This means that you don't have to reference your game library .dll file in the content pipeline.
+
+# Built-in custom JSON Converters
+
+There are provided custom JSON Converters for.....<br/>
+
+<b>MonoGame.Framework</b>
+
+* Color
+* Vector2
+* Rectangle
+* Point
+
+<b>MonoGame.Extended</b>
+
+* RectangleF
+* Size2
+
+```CSharp
+namespace Test
+{
+    public class Showcase
+    {
+        public Color color;
+        public Vector2 vector;
+        public Rectangle rectangle;
+        public Point point;
+        public RectangleF rectangleF;
+        public Size2 size;
+    }
+}
+```
+<b>Parsed into JSON</b>
+
+```JSONC
+{
+  "$type": "Test.Showcase, Test",
+  
+  //"R, G, B, A"
+  "color": "255, 255, 255, 255",
+  
+  //"X, Y"
+  "vector": "250.25, 250.25",
+  
+  //"X, Y, Width, Height"
+  "rectangle": "25, 25, 50, 50",
+  
+  //"X, Y"
+  "point": "25, 50",
+  
+  //"X, Y, Width, Height"
+  "rectangleF": "25.5, 25.5, 50.5, 50.5",
+  
+  //"Width, Height"
+  "size": "123.1, 123.1"
+}
+```
+
+These converters make it easier to write <b>MonoGame.Framework</b> and <b>MonoGame.Extended</b> types.
+
+# Dependencies
+
+When using this library, Make sure that these .dll files are in the same folder.
+
+* MonoGame.FrameWork
+* MonoGame.Extended
+* Newtonsoft.Json.Bson
+* Newtonsoft.Json
